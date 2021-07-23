@@ -1,18 +1,18 @@
 int maxim(int a, int b, int c, int d) {
 
-	int arr[4] = { a, b, c, d };
-	int temp;
-
-	for (int i = 0; i < 4 - 1; i++) {
-		for (int j = 0; j < 4 - i - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
+	if (a >= b && a >= c && a >= d) {
+		return a;
 	}
 
+	if (b >= a && b >= c && b >= d) {
+		return b;
+	}
 
-	return arr[3];
+	if (c >= a && c >= b && c >= d) {
+		return c;
+	}
+	
+	if(d >= a && d >= b && d >= c) { 
+		return d;
+	}
 }
